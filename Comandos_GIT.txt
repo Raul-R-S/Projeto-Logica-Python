@@ -1,0 +1,92 @@
+=========================================
+CONEXÃO COM O GITHUB (SÓ FAZ UMA VEZ POR PROJETO)
+=========================================
+
+1. git remote add origin [link]
+   - O que faz: Diz ao PC onde é a casa do projeto na nuvem.
+   
+2. git branch -M main
+   - O que faz: Define "main" como o nome do tronco principal.
+
+3. git push -u origin main
+   - O que faz: Envia os arquivos e "conecta" as duas pontas para sempre.
+
+
+=========================================
+MEU GUIA PROFISSIONAL DE GIT - RAUL
+=========================================
+
+1. git status
+   - O que faz: Mostra o estado atual (quem mudou, quem é novo).
+   - Quando usar: SEMPRE. Antes, durante e depois de qualquer comando.
+
+2. git add [nome_do_arquivo] ou git add .
+   - O que faz: Prepara os arquivos para o salvamento.
+   - Cenário: Use quando terminar uma pequena lógica ou criar um arquivo novo.
+
+3. git commit -m "Minha mensagem"
+   - O que faz: Tira a "foto" oficial e registra no histórico.
+   - Cenário: Use quando chegar em um ponto do código que está funcionando.
+
+4. git push
+   - O que faz: Envia suas fotos (commits) do PC para o GitHub.
+   - Cenário: Use no final do dia ou quando quiser que o RH veja seu progresso.
+
+
+
+=====================================================
+PARTE 2: CONECTANDO O PC AO GITHUB (O APERTO DE MÃO) 
+=====================================================
+
+1. git remote add origin [LINK_DO_REPOSITORIO]
+   - Cenário: Quando a pasta no PC já existe mas o GitHub ainda não a conhece.
+   - O que faz: Cria a ponte entre o seu Google Drive e a nuvem.
+
+2. git branch -M main
+   - Cenário: Ajuste de padrão. 
+   - O que faz: Garante que o nome do projeto seja "main" (padrão profissional).
+
+3. git push -u origin main
+   - Cenário: O grande envio!
+   - O que faz: Sobe os arquivos. O "-u" serve para o PC "lembrar" que, 
+     daqui para frente, basta digitar apenas "git push" para atualizar.
+
+
+
+==================================================================================
+
+------- O "Segurança da Festa": .gitignore
+
+Você perguntou como dizer ao Git o que não salvar (como senhas da Orion ou pastas pesadas do Python). 
+Para isso, usamos um arquivo especial chamado .gitignore (o ponto no início do nome é obrigatório).
+
+Como criar:
+    Crie um novo arquivo no VS Code chamado .gitignore.
+    Dentro dele, escreva o nome do que quer ignorar. Exemplo:
+
+# Ignorar arquivos de senhas
+    senhas.txt
+    config_banco.json
+
+# Ignorar pastas que o Python cria sozinho
+    __pycache__/
+    O Resultado: 
+    O Git vai passar por esses arquivos e fingir que eles não existem. Eles ficam no seu Google Drive, 
+    mas nunca sobem para o GitHub.
+
+
+==================================================================================
+
+
+-------Comando vs. Ícones do VS Code (O que é melhor?)
+
+o VS Code tem ícones (na barra lateral esquerda, um ícone que parece um triângulo com círculos).
+Pelo Ícone (Visual): É bom para ver rápido o que mudou e clicar no "+" para adicionar. É mais "amigável".
+
+Pelo Terminal (Comandos): É o jeito Expert.
+
+Vantagem: 
+Se um dia o VS Code der erro, você sabe resolver. Se você precisar mexer no servidor da empresa (onde não tem tela, só texto), você saberá o que fazer.
+
+Minha sugestão: 
+Como estamos na mentoria, continue pelos comandos. Isso vai te dar uma autoridade técnica muito maior quando estiver conversando com outros programadores.
