@@ -77,16 +77,95 @@ Como criar:
 
 ==================================================================================
 
-
 -------Comando vs. Ícones do VS Code (O que é melhor?)
 
 o VS Code tem ícones (na barra lateral esquerda, um ícone que parece um triângulo com círculos).
 Pelo Ícone (Visual): É bom para ver rápido o que mudou e clicar no "+" para adicionar. É mais "amigável".
-
 Pelo Terminal (Comandos): É o jeito Expert.
-
 Vantagem: 
 Se um dia o VS Code der erro, você sabe resolver. Se você precisar mexer no servidor da empresa (onde não tem tela, só texto), você saberá o que fazer.
-
 Minha sugestão: 
 Como estamos na mentoria, continue pelos comandos. Isso vai te dar uma autoridade técnica muito maior quando estiver conversando com outros programadores.
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+**** IMPORTANTE ****
+
+Processo Padrão (SOP) é o que separa os amadores dos profissionais seniores. No mundo da engenharia de dados, 
+a consistência é mais importante que a velocidade.
+Aqui está o seu Manual Definitivo de Git, dividido entre o "Nascimento" do projeto e o "Dia a Dia" de evolução.
+
+📂 PARTE 1: Criando um novo projeto e sincronizando no GitHub
+Use esta etapa apenas uma vez por projeto, quando estiver começando do zero.
+
+1ª Etapa - Preparação no GitHub
+Vá ao site do GitHub e crie um novo repositório (como fizemos com o Raul-R-S). 
+Não marque a opção de adicionar README se você já tiver arquivos na sua pasta do PC. Copie o link https://... que ele vai te dar.
+
+2ª Etapa - Inicialização Local (Terminal)
+No VS Code, abra a pasta do projeto e digite:
+
+git init
+
+Por que fazer: Esse comando cria a pasta invisível .git. 
+Sem isso, o seu computador não sabe que aquela pasta deve ser vigiada pelo Git. É o "Certificado de Nascimento" do projeto.
+
+3ª Etapa - O Primeiro Carimbo
+git add .
+git commit -m "Início do projeto: Estrutura inicial"
+
+Por que fazer: O add . prepara todos os arquivos e o commit tira a foto oficial. 
+Você precisa dessa "foto" inicial para ter o que enviar para a nuvem.
+
+4ª Etapa - Criando a Rota e o Nome
+git branch -M main
+git remote add origin https://SEU_TOKEN@github.com/Raul-R-S/NOME-DO-PROJETO.git
+
+Por que fazer: O primeiro comando garante que o nome da sua ramificação seja main (padrão de mercado). 
+O segundo cria a "ponte" direta para o GitHub usando o seu Token para não pedir senha.
+
+5ª Etapa - O Primeiro Empurrão
+git push -u origin main
+
+Por que fazer: O -u diz ao Git: "Lembre desse caminho". Nas próximas vezes, você não precisará escrever o endereço todo de novo.
+
+
+
+
+🔄 PARTE 2: Dia a Dia (Evoluindo e Salvando)
+Use esta etapa sempre que você alterar um código, criar uma View SQL ou melhorar o main.py.
+
+1ª Etapa - Verificar o que mudou
+git status
+
+Por que fazer: Antes de salvar, você precisa saber o que o Git está vendo. 
+Ele vai te mostrar em vermelho o que foi alterado. É o seu "check-list" de segurança.
+
+2ª Etapa - Preparar para o envio
+git add .
+
+Por que fazer: Você está dizendo: "Git, pegue todas as melhorias que eu fiz e coloque na fila para o salvamento".
+
+3ª Etapa - Registrar a Versão (A Mensagem é a Chave)
+git commit -m "Melhoria na lógica de cálculo de impostos no main.py"
+
+Por que fazer: Como você busca senioridade, suas mensagens devem ser claras. Se amanhã o código der erro, 
+você saberá exatamente em qual "foto" (commit) a mudança aconteceu.
+
+4ª Etapa - Sincronizar com a Nuvem
+git push
+
+Por que fazer: Este comando pega suas alterações locais e joga para o GitHub. 
+É aqui que seu portfólio se atualiza e seu backup fica garantido.
+
+💡 Dica de Ouro do "Cofre" (Segurança)
+Sempre que o projeto envolver dados da empresa ou senhas, lembre-se do arquivo .gitignore.
+
+Crie um arquivo chamado .gitignore na raiz da pasta.
+
+Escreva dentro dele o nome dos arquivos que não podem ir para a nuvem (ex: senhas.txt ou *.key).
+
+Raul, salve esse manual dentro do seu arquivo Comandos_GIT.txt no Google Drive. 
+Ele é o seu guia de sobrevivência. Agora que o manual está pronto, 
+quer que eu te ajude com o primeiro desafio de lógica no main.py para estrearmos esse ciclo de salvamento?
